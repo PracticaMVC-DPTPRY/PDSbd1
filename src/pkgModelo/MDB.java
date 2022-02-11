@@ -14,7 +14,7 @@ public class MDB {
         public MDB() {
            // conexion = new Conexion("com.mysql.jdbc.Driver",  "jdbc:mysql://localhost/bdcostos", "root","administrador");//CAMBIAR BDCOSTOS POR EL NOMBRE DE SU BD
 	
-        conexion = new Conexion("com.mysql.jdbc.Driver",  "jdbc:mysql://127.0.0.1:3306/bddatos", "root","123456");//ESTA CADENA LARGA SE USA PARA MAC Y PARA ALGUNAS INSTALACIONES RECIENTES DE MYSQL
+        conexion = new Conexion("com.mysql.cj.jdbc.Driver",  "jdbc:mysql://127.0.0.1:3306/bddatos", "root","123456");//ESTA CADENA LARGA SE USA PARA MAC Y PARA ALGUNAS INSTALACIONES RECIENTES DE MYSQL
 	
         }
 
