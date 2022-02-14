@@ -12,6 +12,7 @@ public class FrmCliente extends javax.swing.JFrame {
      */
     public FrmCliente() {
         initComponents();
+        //Prueba de descarga
     }
 
     /**
