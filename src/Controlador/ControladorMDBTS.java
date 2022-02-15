@@ -31,5 +31,6 @@ public class ControladorMDBTS implements ActionListener {
     }
     public void limpiar(){
        _view.txtCedula.setText(null);
+       _view.txtLugar_Expedicion.setText(null);
     }
 }
