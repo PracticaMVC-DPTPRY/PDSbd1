@@ -16,24 +16,18 @@ public class ControladorMDBTS implements ActionListener {
         this._view.cmdAlta.addActionListener(this);
        this._view.cmdEliminar.addActionListener(this);
     }
-
-  
-    
-
-
     @Override 
     public void actionPerformed(ActionEvent e){
         String leyenda="";
         if(e.getSource()==_view.cmdAlta){
-            leyenda=_model.registrarAlta("seguimiento_clientes"," null, ' " +_view.txtCedula.getText()+" ',' " +_view.txtLugar_Expedicion.getText() +" ',' " +_view.txtNombre_Completo.getText() 
-            +" ',' " +_view.txtProfesion.getText()+" ',' " +_view.txtDireccion_Residencial.getText()+" ',' " +_view.txtCiudad.getText()+" ',' " +_view.txtDepartamento.getText()
-            +" ',' " +_view.txtEmail.getText()+" ',' " +_view.txtTel_Residencial.getText()+" ',' " +_view.txtTel_Trabajo.getText()+" ',' " +_view.txtNum_Factura.getText()+" ',' " +_view.txtTipo_Cartera.getText()
-            +" ',' " +_view.txtFecha_Mora.getText()+" ',' " +_view.txtDias_Mora.getText()+" ',' " +_view.txtVal_Mora.getText()+" ',' " +_view.txtV_Seguro.getText()+" ',' " +_view.txtInteres_Mora.getText()
-            +" ',' " +_view.txtSald_Restante.getText()+" ',' " +_view.txtTipo_Cobro.getText()+" ',' " +_view.txtFecha_Acuerdo_Uno.getText()+" ',' " +_view.txtAcuerdo_Uno.getText()
-            +" ',' " +_view.txtFecha_Acuerdo_Dos.getText()+" ',' " +_view.txtAcuerdo_Dos.getText()+" ',' " +_view.txtFecha_Acuerdo_Tres.getText()+" ',' " +_view.txtAcuerdo_Tres.getText()
-            +" ',' " +_view.txtFecha_Acuerdo_Cuatro.getText()+" ',' " +_view.txtAcuerdo_Cuatro.getText());
+            leyenda=_model.registrarAlta("seguimiento_clientes","null," +_view.txtCedula.getText()+",'" +_view.txtLugar_Expedicion.getText() +"','" +_view.txtNombre_Completo.getText() 
+            +"','" +_view.txtProfesion.getText()+"','" +_view.txtDireccion_Residencial.getText()+"','" +_view.txtCiudad.getText()+"','" +_view.txtDepartamento.getText()
+            +"','" +_view.txtEmail.getText()+"'," +_view.txtTel_Residencial.getText()+"," +_view.txtTel_Trabajo.getText()+"," +_view.txtNum_Factura.getText()+",'" +_view.txtTipo_Cartera.getText()
+            +"','" +_view.txtFecha_Mora.getText()+"'," +_view.txtDias_Mora.getText()+"," +_view.txtVal_Mora.getText()+"," +_view.txtV_Seguro.getText()+"," +_view.txtInteres_Mora.getText()
+            +"," +_view.txtSald_Restante.getText()+",'" +_view.txtTipo_Cobro.getText()+"','" +_view.txtFecha_Acuerdo_Uno.getText()+"','" +_view.txtAcuerdo_Uno.getText()
+            +"','" +_view.txtFecha_Acuerdo_Dos.getText()+"','" +_view.txtAcuerdo_Dos.getText()+"','" +_view.txtFecha_Acuerdo_Tres.getText()+"','" +_view.txtAcuerdo_Tres.getText()
+            +"','" +_view.txtFecha_Acuerdo_Cuatro.getText()+"','" +_view.txtAcuerdo_Cuatro.getText()+"'");
         JOptionPane.showMessageDialog(null, leyenda);
-        
             limpiar();
         }
        }

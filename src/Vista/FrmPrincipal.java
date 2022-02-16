@@ -6,6 +6,7 @@
 package Vista;
 
 import Controlador.ControladorMDB;
+import Controlador.ControladorMDBTC;
 import Controlador.ControladorMDBTS;
 import pkgModelo.MDB;
 
@@ -171,10 +172,9 @@ public class FrmPrincipal extends javax.swing.JFrame {
 
     private void cmdPrimeraTablaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdPrimeraTablaActionPerformed
         MDB objModelo=new MDB();
-        FrmVista objVista=new FrmVista();
-        ControladorMDB objController;
-        objController = new ControladorMDB(objVista,objModelo);
-        objController.iniciar();
+        FrmCliente objVista=new FrmCliente();
+        ControladorMDBTC objController;
+        objController = new ControladorMDBTC(objVista,objModelo);
         objVista.setVisible(true);
     }//GEN-LAST:event_cmdPrimeraTablaActionPerformed
 
@@ -188,7 +188,14 @@ public class FrmPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_cmdSegundaTablaActionPerformed
 
     private void cmdTerceraTablaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdTerceraTablaActionPerformed
-        // TODO add your handling code here:
+        MDB objModelo=new MDB();
+        FrmVista objVista=new FrmVista();
+        ControladorMDB objController;
+        objController = new ControladorMDB(objVista,objModelo);
+        objController.iniciar();
+        objVista.setVisible(true);
+        
+        
     }//GEN-LAST:event_cmdTerceraTablaActionPerformed
 
     /**

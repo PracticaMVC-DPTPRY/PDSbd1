@@ -71,6 +71,7 @@ public class FrmSeguimientoCliente extends javax.swing.JFrame {
         txtAcuerdo_Dos = new javax.swing.JTextField();
         txtFecha_Acuerdo_Tres = new javax.swing.JTextField();
         txtAcuerdo_Tres = new javax.swing.JTextField();
+        cerrar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -218,6 +219,11 @@ public class FrmSeguimientoCliente extends javax.swing.JFrame {
 
         cmdAlta.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         cmdAlta.setText("Alta");
+        cmdAlta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmdAltaActionPerformed(evt);
+            }
+        });
 
         cmdEliminar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         cmdEliminar.setText("Eliminar");
@@ -238,6 +244,13 @@ public class FrmSeguimientoCliente extends javax.swing.JFrame {
         jLabel20.setText("Fecha acuerdo 1");
 
         jLabel21.setText("Acuerdo 1");
+
+        cerrar.setText("Cerrar ventana");
+        cerrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cerrarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -261,13 +274,18 @@ public class FrmSeguimientoCliente extends javax.swing.JFrame {
                             .addComponent(jLabel19)
                             .addComponent(jLabel18)
                             .addComponent(jLabel17)
-                            .addComponent(jLabel16)))
+                            .addComponent(jLabel16))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 212, Short.MAX_VALUE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(72, 72, 72)
-                        .addComponent(cmdAlta)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 230, Short.MAX_VALUE)
+                        .addComponent(cmdAlta)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(cmdEliminar)
+                        .addGap(20, 20, 20)))
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(cmdEliminar)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(94, 94, 94)
+                        .addComponent(cerrar))
                     .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtDias_Mora, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -348,7 +366,8 @@ public class FrmSeguimientoCliente extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cmdAlta)
-                    .addComponent(cmdEliminar))
+                    .addComponent(cmdEliminar)
+                    .addComponent(cerrar))
                 .addGap(24, 24, 24))
         );
 
@@ -382,6 +401,14 @@ public class FrmSeguimientoCliente extends javax.swing.JFrame {
     private void cmdEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdEliminarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cmdEliminarActionPerformed
+
+    private void cmdAltaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdAltaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmdAltaActionPerformed
+
+    private void cerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cerrarActionPerformed
+        this.setVisible(false);
+    }//GEN-LAST:event_cerrarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -419,6 +446,7 @@ public class FrmSeguimientoCliente extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton cerrar;
     public javax.swing.JButton cmdAlta;
     public javax.swing.JButton cmdEliminar;
     private javax.swing.JLabel jLabel1;

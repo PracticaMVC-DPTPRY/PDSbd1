@@ -32,6 +32,7 @@ public class FrmVista extends javax.swing.JFrame {
         txtpsw = new javax.swing.JTextField();
         cmdAlta = new javax.swing.JButton();
         cmdEliminar = new javax.swing.JButton();
+        Cerrar = new javax.swing.JButton();
 
         jTextField4.setText("jTextField4");
 
@@ -46,6 +47,13 @@ public class FrmVista extends javax.swing.JFrame {
         cmdAlta.setText("Altas");
 
         cmdEliminar.setText("Bajas");
+
+        Cerrar.setText("Cerrar ventana");
+        Cerrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CerrarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -70,9 +78,11 @@ public class FrmVista extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(52, 52, 52)
                         .addComponent(cmdAlta)
-                        .addGap(84, 84, 84)
-                        .addComponent(cmdEliminar)))
-                .addContainerGap(28, Short.MAX_VALUE))
+                        .addGap(57, 57, 57)
+                        .addComponent(cmdEliminar)
+                        .addGap(39, 39, 39)
+                        .addComponent(Cerrar)))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -92,12 +102,17 @@ public class FrmVista extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cmdAlta)
-                    .addComponent(cmdEliminar))
+                    .addComponent(cmdEliminar)
+                    .addComponent(Cerrar))
                 .addGap(47, 47, 47))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void CerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CerrarActionPerformed
+        this.setVisible(false);
+    }//GEN-LAST:event_CerrarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -138,6 +153,7 @@ public class FrmVista extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Cerrar;
     public javax.swing.JButton cmdAlta;
     public javax.swing.JButton cmdEliminar;
     private javax.swing.JLabel jLabel1;
