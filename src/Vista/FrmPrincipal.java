@@ -5,6 +5,10 @@
  */
 package Vista;
 
+import Controlador.ControladorMDB;
+import Controlador.ControladorMDBTS;
+import pkgModelo.MDB;
+
 /**
  *
  * @author Daniel Xithe
@@ -166,11 +170,21 @@ public class FrmPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void cmdPrimeraTablaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdPrimeraTablaActionPerformed
-        // TODO add your handling code here:
+        MDB objModelo=new MDB();
+        FrmVista objVista=new FrmVista();
+        ControladorMDB objController;
+        objController = new ControladorMDB(objVista,objModelo);
+        objController.iniciar();
+        objVista.setVisible(true);
     }//GEN-LAST:event_cmdPrimeraTablaActionPerformed
 
     private void cmdSegundaTablaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdSegundaTablaActionPerformed
-        // TODO add your handling code here:
+        MDB objModelo=new MDB();
+        FrmSeguimientoCliente objVista=new FrmSeguimientoCliente();
+        ControladorMDBTS objController;
+        objController = new ControladorMDBTS(objVista,objModelo);
+        
+        objVista.setVisible(true);
     }//GEN-LAST:event_cmdSegundaTablaActionPerformed
 
     private void cmdTerceraTablaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdTerceraTablaActionPerformed
