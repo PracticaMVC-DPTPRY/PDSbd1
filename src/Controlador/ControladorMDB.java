@@ -1,6 +1,6 @@
 package Controlador;
 
-
+//prueba
 import pkgModelo.MDB;
 import Vista.FrmVista;
 import java.awt.event.ActionEvent;
@@ -27,7 +27,7 @@ public void actionPerformed(ActionEvent e) {
         String leyenda="";//esta variable servirá para atrapar los errores sql
 
         if (e.getSource()==_view.cmdAlta){ //Si el botón presionado fue el de alta
-        leyenda=_model.registrarAlta("TbUsuarios"," null, ' " +_view.txtNombre.getText()+" ',' " +_view.txtUsuario.getText() +" ', "+_view.txtpsw.getText());
+        leyenda=_model.registrarAlta("Tbusuarios"," null, ' " +_view.txtNombre.getText()+"','" +_view.txtUsuario.getText() +"',"+_view.txtpsw.getText());
         //Se puede usar una variable o el control, lo ideal es que se pudiera llamar una función de
        // validación aquí sobre los datos obteindos de las cajas de texto
         JOptionPane.showMessageDialog(null, leyenda);//Se manda mensaje con elresultado de la
